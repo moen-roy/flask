@@ -6,8 +6,12 @@ import re
 
 # setting the initial bluepring
 student_bp= Blueprint("student",__name__)
+@student_bp.route("/",methods=["GET"])
+def homepage():
+    print("Welcome to our site")
+    return "Homepage activated"
 # adding the students using json method
-@student_bp.route("/add/json",methods=["POST"])
+@student_bp.route("/add/json",methods=["POST"])         
 def add_student():
     data= request.get_json()
     name= data.get("name")
@@ -101,12 +105,3 @@ def delete_student(id):
     return jsonify({
         "message":"Student deleted"        
     })
-
-
-
-    
-
-    
-
-
-
