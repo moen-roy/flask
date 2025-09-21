@@ -1,0 +1,8 @@
+config.py
+    --import os 
+    --import load_dotenv__(loads virtual env)
+
+id= db.Column(db.Integer,primary_key=True)
+name= db.Column(db.String(50),unique= True,nullable=false)
+email= db.Column(db.String(50),unique= True,nullable=false)
+
