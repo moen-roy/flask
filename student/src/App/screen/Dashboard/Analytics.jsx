@@ -1,7 +1,7 @@
 function Screen(){
     return(
         <div>
-            <h1>Login screen</h1>
+            <h1>Analytic screen</h1>
         </div>
     )
 }
